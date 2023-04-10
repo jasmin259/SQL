@@ -1,0 +1,33 @@
+--Create a clothing store database 
+
+CREATE TABLE Clothing (id INTEGER PRIMARY KEY, category TEXT, name TEXT, size INTEGER, price$ INTEGER, colour TEXT);
+
+INSERT INTO Clothing VALUES (1,"outerwear","jacket",40,100,"black");
+INSERT INTO Clothing VALUES (2,"outerwear","jacket",42,100,"beige");
+INSERT INTO Clothing VALUES (3,"outerwear","jacket",44,120,"black");
+INSERT INTO Clothing VALUES (4,"outerwear","hat",0,35,"brown");
+INSERT INTO Clothing VALUES (5,"innerwear","jumper",36,45,"red");
+INSERT INTO Clothing VALUES (6,"innerwear","t-shirt",38,20,"white");
+INSERT INTO Clothing VALUES (7,"innerwear","t-shirt",36,45,"grey");
+INSERT INTO Clothing VALUES (8,"innerwear","t-shirt",36,20,"white");
+INSERT INTO Clothing VALUES (9,"innerwear","t-shirt",40,20,"white");
+INSERT INTO Clothing VALUES (10,"innerwear","t-shirt",36,20,"white");
+INSERT INTO Clothing VALUES (11,"innerwear","t-shirt",38,20,"grey");
+INSERT INTO Clothing VALUES (12,"innerwear","t-shirt",40,20,"grey");
+INSERT INTO Clothing VALUES (13,"innerwear","t-shirt",44,20,"grey");
+INSERT INTO Clothing VALUES (14,"innerwear","t-shirt",46,20,"grey");
+INSERT INTO Clothing VALUES (15,"outerwear","jacket",42,100,"black");
+INSERT INTO Clothing VALUES (16,"outerwear","jacket",40,100,"brown");
+INSERT INTO Clothing VALUES (17,"innerwear","jumper",38,45,"red");
+
+--Display the database ordered by price
+SELECT * from Clothing Order by price$;
+
+--How many t-shirts does the store sell?
+SELECT COUNT(name) from Clothing where name="t-shirt"; 
+
+--How much revenue does the store make when selling all t-shirts?
+SELECT SUM(price$) from Clothing where name="t-shirt"; 
+
+--How many t-shirt items does the store have which are size 42 and above? 
+SELECT COUNT(size) from Clothing where size >= 42 and name="t-shirt"; 
