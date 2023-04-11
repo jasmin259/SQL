@@ -1,0 +1,32 @@
+/* Create table about famous authors, books written and prizes won */
+
+CREATE TABLE famous_authors(id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,birthyear INTEGER ,nationality TEXT);
+
+INSERT into famous_authors (name,birthyear,nationality) VALUES ("Kazuo Ishiguro","1954","Japanese");
+INSERT into famous_authors (name,birthyear,nationality) VALUES("Gabriel Garcia Marquez","1927","Columbian");
+INSERT into famous_authors (name,birthyear,nationality) VALUES("Orhan Pamuk","1952","Turkish");
+INSERT into famous_authors (name,birthyear,nationality) VALUES("Alice Munro","1931","Canadian");
+INSERT into famous_authors (name,birthyear,nationality) VALUES("Margaret Atwood","1939","Canadian");
+INSERT into famous_authors (name,birthyear,nationality) VALUES("Ernest Hemingway","1899","American");
+INSERT into famous_authors (name,birthyear,nationality) VALUES("Charles Dickens","1812","English");
+INSERT into famous_authors (name,birthyear,nationality) VALUES("Agatha Cristie","1890","English");
+INSERT into famous_authors (name,birthyear,nationality) VALUES("Jane Austen","1775","English");
+INSERT into famous_authors (name,birthyear,nationality) VALUES("Haruki Murakami","1929","Japanese");
+INSERT into famous_authors (name,birthyear,nationality) VALUES("Beatrix Potter","1866","English");
+INSERT into famous_authors (name,birthyear,nationality) VALUES("Franz Kafka","1883","Czech");
+INSERT into famous_authors (name,birthyear,nationality) VALUES("Cornelia Funke","1958","German");
+INSERT into famous_authors (name,birthyear,nationality) VALUES("Paulo Coelho","1947","Brazilian");
+INSERT into famous_authors (name,birthyear,nationality) VALUES("Stephen King","1947","American");
+
+CREATE TABLE famous_prizes(author_id INTEGER ,award TEXT,winner TEXT,date INTEGER);
+
+INSERT into famous_prizes (author_id, award,winner,date) VALUES("7","Nobel Prize Literature","Orhan Pamuk","2006"); 
+INSERT into famous_prizes (author_id, award,winner,date) VALUES("2","Nobel Prize Literature","Gabriel Garcia Marquez","1982");
+INSERT into famous_prizes (author_id,award,winner,date) VALUES("4","Nobel Prize Literature","Alice Munro","2013");
+INSERT into famous_prizes (author_id,award,winner,date) VALUES("5","Booker Prize", "Margaret Atwood","2019");
+INSERT into famous_prizes (author_id,award,winner,date) VALUES("1","Nobel Prize Literature","Kazuo Ishiguro","2017");
+INSERT into famous_prizes (author_id,award,winner,date) VALUES("1","Booker Prize","Kazuo Ishiguro","1989");
+INSERT into famous_prizes (author_id,award,winner,date) VALUES("6","Nobel Prize Literature","Ernest Hemingway","1954");
+
+
+CREATE TABLE famous_books(author_id INTEGER ,title TEXT,author TEXT,published INTEGER); 
