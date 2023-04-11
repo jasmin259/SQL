@@ -28,5 +28,23 @@ INSERT into famous_prizes (author_id,award,winner,date) VALUES("1","Nobel Prize 
 INSERT into famous_prizes (author_id,award,winner,date) VALUES("1","Booker Prize","Kazuo Ishiguro","1989");
 INSERT into famous_prizes (author_id,award,winner,date) VALUES("6","Nobel Prize Literature","Ernest Hemingway","1954");
 
+SELECT * from famous_authors;
 
-CREATE TABLE famous_books(author_id INTEGER ,title TEXT,author TEXT,published INTEGER); 
+CREATE TABLE famous_books(author_id INTEGER ,title TEXT,published INTEGER); 
+
+INSERT INTO famous_books VALUES("6","The Old Man and the Sea","1952");
+INSERT INTO famous_books VALUES("1","A Pale View of Hills","1982");
+INSERT INTO famous_books VALUES("5","Handmaid's Tale","1985");
+INSERT INTO famous_books VALUES("2","Love in the Time of Cholera","1985");
+INSERT INTO famous_books VALUES("3","My Name is Red","1998");
+INSERT INTO famous_books VALUES("4","Lives of Girls and Women","1971");
+INSERT INTO famous_books VALUES("7","A Tale of Two Cities","1859");
+INSERT INTO famous_books VALUES("8","Murder on the Orient Express","1934");
+INSERT INTO famous_books VALUES("9","Pride and Prejudice","1813");
+INSERT INTO famous_books VALUES("10","Kafka on the Shore","2002");
+INSERT INTO famous_books VALUES("11","The Tale of Peter Rabbit","1901");
+INSERT INTO famous_books VALUES("12","The Metamorphosis","1915");
+INSERT INTO famous_books VALUES("13","Inkheart","2003");
+INSERT INTO famous_books VALUES("14","The Alchemist","1988");
+INSERT INTO famous_books VALUES("15","It","1986");
+
