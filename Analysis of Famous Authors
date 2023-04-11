@@ -20,15 +20,13 @@ INSERT into famous_authors (name,birthyear,nationality) VALUES("Stephen King","1
 
 CREATE TABLE famous_prizes(author_id INTEGER ,award TEXT,winner TEXT,date INTEGER);
 
-INSERT into famous_prizes (author_id, award,winner,date) VALUES("7","Nobel Prize Literature","Orhan Pamuk","2006"); 
+INSERT into famous_prizes (author_id, award,winner,date) VALUES("3","Nobel Prize Literature","Orhan Pamuk","2006"); 
 INSERT into famous_prizes (author_id, award,winner,date) VALUES("2","Nobel Prize Literature","Gabriel Garcia Marquez","1982");
 INSERT into famous_prizes (author_id,award,winner,date) VALUES("4","Nobel Prize Literature","Alice Munro","2013");
 INSERT into famous_prizes (author_id,award,winner,date) VALUES("5","Booker Prize", "Margaret Atwood","2019");
 INSERT into famous_prizes (author_id,award,winner,date) VALUES("1","Nobel Prize Literature","Kazuo Ishiguro","2017");
 INSERT into famous_prizes (author_id,award,winner,date) VALUES("1","Booker Prize","Kazuo Ishiguro","1989");
 INSERT into famous_prizes (author_id,award,winner,date) VALUES("6","Nobel Prize Literature","Ernest Hemingway","1954");
-
-SELECT * from famous_authors;
 
 CREATE TABLE famous_books(author_id INTEGER ,title TEXT,published INTEGER); 
 
@@ -47,4 +45,17 @@ INSERT INTO famous_books VALUES("12","The Metamorphosis","1915");
 INSERT INTO famous_books VALUES("13","Inkheart","2003");
 INSERT INTO famous_books VALUES("14","The Alchemist","1988");
 INSERT INTO famous_books VALUES("15","It","1986");
+
+-- Depicts awards some of these famous authors have won by using an INNER JOIN command 
+
+SELECT famous_authors.name as Author,famous_prizes.award as Award,famous_prizes.date as "Date"
+FROM famous_authors
+JOIN famous_prizes
+ON famous_authors.id=famous_prizes.author_id;
+
+--Depicts authors, their most famous book, as well as the number of awards won (only Booker Prize and Nobel Price Literature) 
+
+SELECT famous_authors.name as Author,famous_books.title as Title,famous_books.published as "Publishing year" FROM famous_authors
+JOIN famous_books
+ON famous_authors.id=famous_books.author_id;
 
