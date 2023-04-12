@@ -7,4 +7,4 @@ ON "CharlotteChaze/BreakIntoTech"."netflix_people"."show_id" = "CharlotteChaze/B
 --How many movie titles are there in the database? (movies only, not tv shows)
 SELECT COUNT(*)
 FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
-WHERE type LIKE "Movie";
+WHERE type LIKE 'Movie';
