@@ -8,3 +8,6 @@ ON "CharlotteChaze/BreakIntoTech"."netflix_people"."show_id" = "CharlotteChaze/B
 SELECT COUNT(*)
 FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
 WHERE type LIKE 'Movie';
+
+--When was the most recent batch of tv shows and/or movies added to the database?
+SELECT max(date(date_added)) from "CharlotteChaze/BreakIntoTech"."netflix_titles_info";
