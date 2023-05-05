@@ -1,0 +1,24 @@
+--Creating table called cloudcatcher
+
+CREATE TABLE cloudcatcher (id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, score INTEGER);
+
+--Inserting rows into the table 
+
+INSERT INTO cloudcatcher VALUES (1,"funnybunny12",1240);
+INSERT INTO cloudcatcher VALUES (2,"joanna23",3420);
+INSERT INTO cloudcatcher VALUES (3,"hanna19",3290);
+INSERT INTO cloudcatcher VALUES (4,"99ballons",4839);
+INSERT INTO cloudcatcher VALUES (5,"happycatcher94",10000);
+INSERT INTO cloudcatcher VALUES (6,"professorthors20",2109);
+
+--1st alteration using UPDATE to change score of one user 
+
+UPDATE cloudcatcher SET score=2000 WHERE id=1; 
+
+SELECT * FROM cloudcatcher; 
+
+--2nd altertion using DELETE to remove row from table 
+
+DELETE FROM cloudcatcher WHERE id=6; 
+
+SELECT * FROM cloudcatcher; 
